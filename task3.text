@@ -1,0 +1,17 @@
+CREATE TABLE kitablar (
+    adı VARCHAR(255),
+    janrı VARCHAR(100),
+    nəşr_ili INT
+);
+
+INSERT INTO kitablar (adı, janrı, nəşr_ili) VALUES
+('Bookman', 'Roman', 2016),
+('inteerest', 'Fəlsəfə', 2018),
+('Bir yaradici', 'Elmi fantastika', 2017),
+('Edeb', 'Müasir ədəbiyyat', 2019),
+('Hakim', 'Detektiv', 2020);
+
+SELECT adı, janrı, nəşr_ili
+FROM kitablar
+WHERE nəşr_ili > 2015
+ORDER BY janrı ASC;
