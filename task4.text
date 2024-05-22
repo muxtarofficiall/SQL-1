@@ -1,0 +1,22 @@
+CREATE TABLE filmlər (
+    ad VARCHAR(255),
+    çıxış_tarixi INT,
+    ratinq DECIMAL(3,1)
+);
+
+INSERT INTO filmlər (ad, çıxış_tarixi, ratinq) VALUES
+('Teslator', 1998, 8.5),
+('sTEFAN', 2005, 7.8),
+('F25', 1995, 9.2),
+('dED45', 2010, 6.9),
+('Mark peter', 1999, 8.1);
+
+
+SELECT ad, çıxış_tarixi, ratinq
+FROM filmlər
+WHERE çıxış_tarixi < 2000 OR ratinq > 7
+ORDER BY 
+    CASE 
+        WHEN çıxış_tarixi < 2000 THEN çıxış_tarixi END ASC,
+    CASE 
+        WHEN ratinq > 7 THEN ratinq END DESC;
