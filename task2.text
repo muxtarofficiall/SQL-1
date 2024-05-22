@@ -1,0 +1,20 @@
+CREATE TABLE işçilər  (
+    AD VARCHAR(50),
+    Maaş DECIMAL(10, 2),
+    Departament VARCHAR(50)
+);
+
+INSERT INTO işçilər (AD, Maaş , Departament)
+VALUES 
+    ('Huseyn', 500.00, 'satış'),
+    ('Məmməd', 800.00, 'satış'),
+    ('Aydan', 720.00, 'satış'),
+    ('Nigar', 5500.00, 'satış'),
+    ('Fərid', 750.00, 'satış'),
+    ('Nərmine', 1320.00, 'satış');
+
+SELECT ad, maaş, departament
+FROM işçilər
+WHERE departament = 'satış' AND maaş > 600
+ORDER BY maaş DESC;
+
